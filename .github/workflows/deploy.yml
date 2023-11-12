@@ -5,30 +5,29 @@ on:
     branches: [main]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: "14"
+    - name: Configure Git
+      run: |
+        git config --local user.email "noreply@github.com"
+        git config --local user.name "GitHub Actions"
 
-      - name: Install dependencies
-        run: npm install
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14' # Or your preferred Node.js version
 
-      - name: Build
-        run: npm run build
+    - name: Install dependencies
+      run: npm install
 
-      - name: Install gh-pages
-        run: npm install -g gh-pages
+    - name: Build
+      run: npm run build
 
-      - name: Deploy
-        run: gh-pages -d dist
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
