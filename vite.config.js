@@ -8,5 +8,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',  // Output directory for built files
   },
-  publicDir: 'dist',
+  publicDir: 'public',
 })
