@@ -28,12 +28,13 @@ jobs:
 
       - name: Build
         run: npm run build
+ 
+      - name: Debugging Output
+        run: echo "Deploy step is about to run"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
           publish_dir: ./dist
-      - name: Debugging Output
-        run: echo "Deploy step is about to run"
 
