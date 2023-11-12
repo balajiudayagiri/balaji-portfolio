@@ -1,29 +1,32 @@
-name: Deploy to GitHub Pages
+name: Deploy Portfolio
 
 on:
   push:
-    branches:
-      - main # Set to default branch
+    branches: [main]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "16" #preferred Node.js version
+          node-version: "14"
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
       - name: Build
         run: npm run build
 
+      - name: Install gh-pages
+        run: npm install -g gh-pages
+
+      - name: Deploy
+        run: gh-pages -d dist
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
