@@ -2,27 +2,23 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main # Set to default branch
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
 
-      - name: Configure Git
-        run: |
-          git config --local user.email "noreply@github.com"
-          git config --local user.name "GitHub Actions"
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "16" # Update to a more recent version of Node.js
+          node-version: "16" #preferred Node.js version
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
       - name: Build
