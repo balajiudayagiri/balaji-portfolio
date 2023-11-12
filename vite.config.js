@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/balaji-portfolio/',
   build: {
-    outDir: 'public',  // Output directory for built files
+    outDir: 'dist',  // Output directory for built files
   },
-  publicDir: 'public',
+  publicDir: 'dist',
 })
