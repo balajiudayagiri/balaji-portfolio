@@ -31,7 +31,10 @@ jobs:
 
       - name: Debugging Output
         run: echo "Deploy step is about to run"
-
+        
+      - name: List dist directory
+        run: ls -al dist
+        
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
