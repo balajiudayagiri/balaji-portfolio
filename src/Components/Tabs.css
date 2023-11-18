@@ -1,0 +1,41 @@
+/* Add your styling here */
+
+.tabs-container {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #c0afa8;
+  border-radius: 5px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  padding: 15px;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  user-select: none;
+  transition: background-color linear 0.3s;
+  font-weight: 800;
+  border-radius: 10px;
+}
+
+.tab:hover {
+  background-color: #b0a39d;
+}
+
+.tab.active {
+  background-color: #000c;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}

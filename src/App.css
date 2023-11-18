@@ -1,31 +1,4 @@
-#root {
-  width: 100vw;
-  background: rgb(238, 174, 202);
-  background: linear-gradient(
-    175deg,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(167, 208, 255, 1) 100%
-  );
-  height: 100vh;
-  margin: 0px;
-}
-
-.header {
-  margin-top: 20px;
-  font-size: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.img-container {
-  height: 200px;
-  width: 200px;
-}
-img {
-  width: 200px; /* desired width */
-  height: 200px; /* desired height */
-  border-radius: 50%;
-  object-position: center;
+header {
+  border: 1px solid;
+  padding: 10px;
 }

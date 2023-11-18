@@ -1,0 +1,31 @@
+.nav-btn {
+  padding: 0px;
+  border-width: 0px;
+  background-color: transparent;
+}
+.hamberger {
+  text-align: end;
+  margin: 10px 10px 0px 0px;
+}
+
+.modal {
+  padding: 20px;
+  position: absolute;
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  top: 0px;
+  height: 100%;
+  width: 90%;
+}
+.menu-item {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-item:hover {
+  background-color: #0000003b;
+}
+
+.menu-item:active {
+  background-color: #0000003b;
+}
