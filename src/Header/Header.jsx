@@ -4,7 +4,6 @@ import ReactDOM from "react-dom"; // Import ReactDOM
 import Tabs from "../Components/Tabs";
 import Tab from "../Components/Tab";
 import { useNavigate } from "react-router-dom";
-import { rootRoute } from "../Utils/RoutesConstant";
 import { useModal } from "../Utils/ModalProvider";
 import "./Header.css";
 
@@ -13,7 +12,7 @@ export default function Header() {
   const { openModal, closeModal, isModalOpen } = useModal();
 
   const handleTabChange = (tabId) => {
-    navigate(rootRoute(tabId));
+    navigate(tabId);
   };
 
   const [displayTabs, setDisplayTabs] = useState(true);
@@ -67,7 +66,7 @@ export default function Header() {
                   <div
                     className="menu-item"
                     onClick={() => {
-                      handleTabChange("home");
+                      handleTabChange("balaji-portfolio");
                       closeModal();
                     }}
                   >
@@ -97,8 +96,8 @@ export default function Header() {
             )}
         </>
       ) : (
-        <Tabs defaultTab="home" onChange={handleTabChange}>
-          <Tab label="Home" value="home" />
+        <Tabs defaultTab="balaji-portfolio" onChange={handleTabChange}>
+          <Tab label="Home" value="balaji-portfolio" />
           <Tab label="About Me" value="about-me" />
           <Tab label="Contact Me" value="contact-me" />
         </Tabs>
