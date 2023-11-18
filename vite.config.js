@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 import ViteSSR from 'vite-plugin-ssr/plugin';
 
 export default defineConfig({
+  base: "/balaji-portfolio/",
   plugins: [react(), ViteSSR()],
   build: {
     outDir: 'dist',
