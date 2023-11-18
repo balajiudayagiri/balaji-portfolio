@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import reactJsx from "vite-react-jsx";
-import ViteSSR from 'vite-plugin-ssr';
+import ViteSSR from 'vite-plugin-ssr/plugin';
 
 // Set the base path to your GitHub repository name
 export default defineConfig({
