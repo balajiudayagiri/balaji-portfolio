@@ -2,3 +2,29 @@ header {
   border: 1px solid;
   padding: 10px;
 }
+
+.highlight-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.highlight-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; /* Highlight color */
+  transition: left 0.5s ease-out; /* Adjust the transition duration and timing function */
+}
+
+.highlight-container:hover::before {
+  left: 100%;
+}
+
+.highlighted-text {
+  display: inline-block;
+  padding: 10px;
+}

@@ -4,8 +4,10 @@ export default function Home() {
   return (
     <div className="home-conatiner">
       <div className="main-content child">
+        <span className='highlight-container'>
+        <h1 style={{fontSize: 'xxx-large'}} className='highlighted-text'>I&apos;m Balaji Udayagiri,</h1>
+        </span>
         <span>
-        <h1 style={{fontSize: 'xxx-large'}}>I&apos;m Balaji Udayagiri,</h1>
         <p> A Software Engineer crafting innovative solutions. Explore my portfolio and discover the art of coding with purpose.</p>
         </span>
       </div>
