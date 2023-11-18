@@ -5,7 +5,7 @@ export default function Home() {
     <div className="home-conatiner">
       <div className="main-content child">
         <span>
-        <h1>I&apos;m Balaji Udayagiri,</h1>
+        <h1 style={{fontSize: 'xxx-large'}}>I&apos;m Balaji Udayagiri,</h1>
         <p> A Software Engineer crafting innovative solutions. Explore my portfolio and discover the art of coding with purpose.</p>
         </span>
       </div>
