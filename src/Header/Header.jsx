@@ -4,7 +4,7 @@ import ReactDOM from "react-dom"; // Import ReactDOM
 import Tabs from "../Components/Tabs";
 import Tab from "../Components/Tab";
 import { useNavigate } from "react-router-dom";
-import { AppRoutes, rootRoute } from "../Utils/RoutesConstant";
+import { rootRoute } from "../Utils/RoutesConstant";
 import { useModal } from "../Utils/ModalProvider";
 import "./Header.css";
 
