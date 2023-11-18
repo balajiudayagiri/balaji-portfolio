@@ -15,6 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route path={AppRoutes.ROOT} element={<Home />} />
+        <Route path={AppRoutes.HOME} element={<Home />} />
         <Route path={AppRoutes.ABOUT_ME} element={<About />} />
         <Route path={AppRoutes.CONTACT_ME} element={<Contact />} />
       </Routes>
