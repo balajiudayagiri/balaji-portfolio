@@ -1,16 +1,12 @@
-// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import ViteSSR from 'vite-plugin-ssr/plugin';
 
+// Set the base path to your GitHub repository name
 export default defineConfig({
-  base: "/balaji-portfolio/",
-  plugins: [react(), ViteSSR()],
+  base: '/balaji-portfolio/', // replace with your repository name
+  plugins: [react()],
   build: {
-    outDir: 'dist',
+    outDir: 'dist',  // Output directory for built files
   },
   publicDir: 'public',
-  ssr: {
-    external: ['react', 'react-dom'],
-  },
 });
