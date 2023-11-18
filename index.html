@@ -1,22 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon for standard browsers -->
-    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAzNJREFUWEfVl31MjXEUxz/3plIpodhNNHlXGVnMUIZUf7SwtbBhhn9iLP94f5uXMbPpH3+0sTFms5nJGjahsLFhkpaXaIVKdaXcEqnHTs+9u/fpdl9074rz5znn+Z7vc57zfM/vp1MURQ/sBrIBA/1jtcAZ4JhOUZS9wOH+qWtXZZ8QqOnHN+/JoFYIKAP09t1l/z8C0q+mCmgoB9MX+N0OPr7gHwpDIyE8BgKGud9TtzsghauKofwqmOocF9DpISIBZqyDwDDXRNwi0NEKj3Oh7oVrQEuGfwgsPAQho50/45JA12+4fxCMb8E/GKKSwBAPQ8eCXzBI/PtnqH4AbwtA6bIWHDEJFh3xkEDNU3h5EaKXQHQyDPKH5o8g/qnLteBv8tVcW0vNhWAn8uayAz35y+AV7oSuTlh+QRv92QL5G7W++bvAMNPJzPytDjw8DrXPwW8IZJzTAsvnuLpa60vaDyNjvUSgqRLu7FDBQsZAyiktcMsnuL3d6vPxg/Q88A30EoFnefDhjgoWORfm5kBHG7Q2gH4QvCuwxiUndiVMXeHhEFoel29+YxP8Mqme2FUwOBSElNKpLSJaMGUZxGaJ1nqJQH0ZFB2ygiXuAeM7KLtiXyBgOMzZCuHTnBeXqNt/wavLUH7NDKiDjLPgGwSNr+F7jSrHlYWqRHcD6yFhC0TN91IH7h2ARjN4cASknrYHFkG6lWP1631h6UmQfEfmVgdE3a6thc5fKoyo4ezNvUPe3AYmOe+YbXwKxG/wkIAACrDFpmVCTGbvoEWHob7UGhs+ARYf85DAlxIoPmoFmbEeJqb1Dip5km+xIQZIy/WQQPUjeGIDMluGK9EeVD5VQTb8+GqNhY6D5BN9JPDoJLQ3qRNumW6BmrcDImbZg8o2LDmv9U9Oh+lr+kjg9XUovWT/cEwWRC0wHzgU+FYN729D5V1trqxrkWsRLEfm8i8QUFmxFgW0BdKZVa63Y61fkNqpsCmOi0vEJQFJ6vgBVfeh+iEYKwAn52jZCbIn4lZ58Uhm+w7tzaogNVdBm1HVBtl60mYZuFFx6qp219zqgLtgfcn7JwgM+NVswC+nA3o9/wPGH1p+T76pcwAAAABJRU5ErkJggg==">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAzNJREFUWEfVl31MjXEUxz/3plIpodhNNHlXGVnMUIZUf7SwtbBhhn9iLP94f5uXMbPpH3+0sTFms5nJGjahsLFhkpaXaIVKdaXcEqnHTs+9u/fpdl9074rz5znn+Z7vc57zfM/vp1MURQ/sBrIBA/1jtcAZ4JhOUZS9wOH+qWtXZZ8QqOnHN+/JoFYIKAP09t1l/z8C0q+mCmgoB9MX+N0OPr7gHwpDIyE8BgKGud9TtzsghauKofwqmOocF9DpISIBZqyDwDDXRNwi0NEKj3Oh7oVrQEuGfwgsPAQho50/45JA12+4fxCMb8E/GKKSwBAPQ8eCXzBI/PtnqH4AbwtA6bIWHDEJFh3xkEDNU3h5EaKXQHQyDPKH5o8g/qnLteBv8tVcW0vNhWAn8uayAz35y+AV7oSuTlh+QRv92QL5G7W++bvAMNPJzPytDjw8DrXPwW8IZJzTAsvnuLpa60vaDyNjvUSgqRLu7FDBQsZAyiktcMsnuL3d6vPxg/Q88A30EoFnefDhjgoWORfm5kBHG7Q2gH4QvCuwxiUndiVMXeHhEFoel29+YxP8Mqme2FUwOBSElNKpLSJaMGUZxGaJ1nqJQH0ZFB2ygiXuAeM7KLtiXyBgOMzZCuHTnBeXqNt/wavLUH7NDKiDjLPgGwSNr+F7jSrHlYWqRHcD6yFhC0TN91IH7h2ARjN4cASknrYHFkG6lWP1631h6UmQfEfmVgdE3a6thc5fKoyo4ezNvUPe3AYmOe+YbXwKxG/wkIAACrDFpmVCTGbvoEWHob7UGhs+ARYf85DAlxIoPmoFmbEeJqb1Dip5km+xIQZIy/WQQPUjeGIDMluGK9EeVD5VQTb8+GqNhY6D5BN9JPDoJLQ3qRNumW6BmrcDImbZg8o2LDmv9U9Oh+lr+kjg9XUovWT/cEwWRC0wHzgU+FYN729D5V1trqxrkWsRLEfm8i8QUFmxFgW0BdKZVa63Y61fkNqpsCmOi0vEJQFJ6vgBVfeh+iEYKwAn52jZCbIn4lZ58Uhm+w7tzaogNVdBm1HVBtl60mYZuFFx6qp219zqgLtgfcn7JwgM+NVswC+nA3o9/wPGH1p+T76pcwAAAABJRU5ErkJggg=="
+    />
     <!-- Favicon for IE -->
-    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAYFJREFUOE+t00tI1FEUx/HPzGSjEJNji7DBwJBom/bGVkaPReA+aCMRtUoICqJW2iIKgnblQloWQ1QGEUGrXBpBD0w0yKKCchLFZ+OVf6OojI69zvb+zvf87u/eEwshXMIFrPVnNYX2WAhh8i+a50dNRYCw3ODpMYb6+TlBeSXpWuJripVFgJDn1R36HpGPTM5VMsWOU2xqWAopArzJMv6NzfupqCK5nr4uXt+lrIKjt0gsSmvFKzy/woatbGtmZprsscLkIzdYt3HBxbKA3ABPz7PzNJldDA/y7GKh8fB1YolVAC9v866L+hP0dCAQL6OpjcraVTKIjp+cZfQrzZ2MfmHkI93XSNVw4DKJZAkH+UnuHSddR1P7gvDhSSZy7DlDzb4SgJFPPG6luoHGc3PCwC/AD7a3UHdoBcDnF/TcZOx7AbC3lZk8vQ94my2Ed/AqqUwJB4Pd9N4n935pWNFvrG8hs/s3Qowk40MMfyDKpLyK9Bbii55vHvNflumf1nkWbuuiw/sAwVQAAAAASUVORK5CYII=">
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAYFJREFUOE+t00tI1FEUx/HPzGSjEJNji7DBwJBom/bGVkaPReA+aCMRtUoICqJW2iIKgnblQloWQ1QGEUGrXBpBD0w0yKKCchLFZ+OVf6OojI69zvb+zvf87u/eEwshXMIFrPVnNYX2WAhh8i+a50dNRYCw3ODpMYb6+TlBeSXpWuJripVFgJDn1R36HpGPTM5VMsWOU2xqWAopArzJMv6NzfupqCK5nr4uXt+lrIKjt0gsSmvFKzy/woatbGtmZprsscLkIzdYt3HBxbKA3ABPz7PzNJldDA/y7GKh8fB1YolVAC9v866L+hP0dCAQL6OpjcraVTKIjp+cZfQrzZ2MfmHkI93XSNVw4DKJZAkH+UnuHSddR1P7gvDhSSZy7DlDzb4SgJFPPG6luoHGc3PCwC/AD7a3UHdoBcDnF/TcZOx7AbC3lZk8vQ94my2Ed/AqqUwJB4Pd9N4n935pWNFvrG8hs/s3Qowk40MMfyDKpLyK9Bbii55vHvNflumf1nkWbuuiw/sAwVQAAAAASUVORK5CYII=" />
     <!-- Favicon for iOS devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/balaji-portfolio/assets/android-chrome-192x192-eb2e6552.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/balaji-portfolio/assets/android-chrome-192x192-eb2e6552.png"
+    />
     <!-- Favicon for Android and other devices -->
-    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=" />
     <title>BALAJI UDAYAGIRI</title>
-    <script type="module" crossorigin src="/balaji-portfolio/assets/index-cf8a9d2a.js"></script>
-    <link rel="stylesheet" href="/balaji-portfolio/assets/index-cdbeded5.css">
+    <script type="module" crossorigin src="/balaji-portfolio/assets/index-d78e01d4.js"></script>
+    <link rel="stylesheet" href="/balaji-portfolio/assets/index-fcfb4677.css">
   </head>
   <body>
     <div id="root"></div>
+    <div id="modal-root"></div>
     
   </body>
 </html>
