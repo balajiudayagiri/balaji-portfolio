@@ -1,9 +1,11 @@
 .home-conatiner {
   display: flex;
   flex-wrap: wrap;
+  height: calc(100vh - 80px);
 }
 
 .main-content {
+  height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -25,9 +27,10 @@
 
 .img-container {
   width: 50%;
+  height: 100%;
 }
 img {
-  height: calc(100vh - 125px); /* desired height */
+  height: 100%; /* desired height */
   object-position: center;
 }
 

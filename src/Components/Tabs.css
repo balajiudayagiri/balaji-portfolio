@@ -3,7 +3,7 @@
 .tabs-container {
   max-width: 400px;
   margin: auto;
-  background-color: #c0afa8;
+  background-color: var(background-color);
   border-radius: 5px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .tab:hover {
-  background-color: #b0a39d;
+  background-image: var(--background-hover);
 }
 
 .tab.active {

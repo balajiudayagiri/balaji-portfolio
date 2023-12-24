@@ -4,9 +4,9 @@ import "./App.css";
 import { AppRoutes } from './Utils/RoutesConstant';
 import Home from './Home/Home';
 import { ModalProvider } from './Utils/ModalProvider';
+import About from './components/About/About';
 
 // Define your components for each route
-const About = () => <h1>About</h1>;
 const Contact = () => <h1>Contact</h1>;
 
 function App() {
